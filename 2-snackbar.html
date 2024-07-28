@@ -1,18 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Snackbar</title>
-        
-      <script type="module" crossorigin src="/goit-advancedjs-hw-02/assets/modulepreload-polyfill-3cfb730f.js"></script>
-      <link rel="stylesheet" href="/goit-advancedjs-hw-02/assets/styles-67589ae2.css">
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snackbar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap&display=swap" rel="stylesheet">
+    
+    <script type="module" crossorigin src="/goit-advancedjs-hw-02/commonHelpers2.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-02/assets/modulepreload-polyfill-3cfb730f.js">
+    <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-02/assets/vendor-77e16229.js">
+    <link rel="stylesheet" href="/goit-advancedjs-hw-02/assets/vendor-7a007824.css">
+    <link rel="stylesheet" href="/goit-advancedjs-hw-02/assets/styles-fb1447c1.css">
+  </head>
 
-    <body>
-        <div class="back-link">
-            <a href="./index.html">Go Back</a>
-          </div>
-        
-    </body>
+  <body>
+    <div class="container">
+      <div class="back-link">
+        <a href="./index.html">Go Back</a>
+      </div>
+      <div class="form-container">
+        <form class="form">
+          <label>
+            Delay (ms)
+            <input type="number" name="delay" required />
+          </label>
+
+          <fieldset>
+            <legend>State</legend>
+            <label>
+              <input type="radio" name="state" value="fulfilled" required />
+              Fulfilled
+            </label>
+            <label>
+              <input type="radio" name="state" value="rejected" required />
+              Rejected
+            </label>
+          </fieldset>
+
+          <button type="submit">Create notification</button>
+        </form>
+      </div>
+      
+    </div>
+  </body>
 </html>
