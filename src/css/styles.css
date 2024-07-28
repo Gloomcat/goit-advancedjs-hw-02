@@ -1,3 +1,5 @@
+@import url('modern-normalize/modern-normalize.css');
+
 body {
   font-family: Montserrat;
   font-size: 16px;
@@ -31,6 +33,7 @@ button {
 
 .container {
   max-width: 1440px;
+  padding: 32px 32px;
 }
 
 .task-list {
@@ -45,7 +48,7 @@ button {
   text-decoration: none;
 }
 
-.timer-container {
+.timer-container, .form-container {
   padding: 32px 156px;
   margin: 0 auto;
 }
@@ -56,8 +59,7 @@ button {
   margin-bottom: 32px;
 }
 
-.picker > button {
-  width: 75px;
+.picker > button, .form > button {
   padding: 8px 16px;
   color: #FFFFFF;
   background-color: #4E75FF;
@@ -71,8 +73,14 @@ button {
   font-weight: 500;
 }
 
+.picker > button {
+  width: 75px;
+}
+
 .picker > button:hover,
-.picker > button:focus {
+.picker > button:focus,
+.form > button:hover,
+.form > button:focus {
   background-color: #6C8CFF;
 }
 
@@ -142,4 +150,56 @@ button {
 
 .flatpickr-months, .flatpickr-time {
   font-weight: 600;
+}
+
+.form {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+input[type="number"] {
+  display: inline-block;
+  width: 100%;
+  padding: 8px 16px;
+  border: 1px solid #808080;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 4px;
+  margin-top: 8px;
+  outline: none;
+}
+
+.form fieldset {
+  display: flex;
+  padding: 24px 48px 8px 48px;
+  justify-content: space-between;
+  border: 1px solid #808080;
+  border-radius: 4px;
+}
+
+.form fieldset label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+input[type="radio"] {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #757575;
+}
+
+input[type="number"]:hover, .form fieldset:hover, .form fieldset:focus {
+  border-color: #000000;
+}
+
+input[type="number"]:focus {
+  border-color: #4E75FF;
+}
+
+.form > button {
+  width: 360px;
+  margin-top: 8px;;
 }
